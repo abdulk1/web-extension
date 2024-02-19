@@ -3,15 +3,13 @@
   "version": "1.0",
   "description": "A Web browser extension that enables the development of database-driven HTML5 (Javascript) applications, without binding to specific back-end database engines for data storage and access.",
   "permissions": ["storage"],
-  // "background": {
-  //   "service_worker": "service_worker.js",
-  //   "type": "module"
-  // },
-  "chrome_url_overrides": {
-    "newtab": "index.html"
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
   },
+  "action": {},
   "cross_origin_embedder_policy": {
-    "value": "credentialless"
+    "value": "require-corp"
   },
   "cross_origin_opener_policy": {
     "value": "same-origin"
